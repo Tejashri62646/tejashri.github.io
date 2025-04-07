@@ -1,0 +1,244 @@
+
+/* ====== General Styles ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #e6ccff, #d8bfff, #c599ff);
+    color: #4a236e;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+/* ====== Header ====== */
+header {
+    background: linear-gradient(to right, #9c27b0, #7b1fa2);
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 15px 15px;
+}
+
+/* ====== Navigation Bar ====== */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    background: #b47ddc;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 12px;
+    margin: 15px auto;
+    width: fit-content;
+}
+
+.nav-button {
+    background: #7b1fa2;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    border: none;
+}
+
+.nav-button:hover {
+    background: #5a1570;
+}
+
+/* ====== Hide Radio Inputs ====== */
+input[type="radio"] {
+    display: none;
+}
+
+/* ====== Sections (Initially Hidden) ====== */
+.section {
+    display: none;
+    padding: 30px;
+}
+
+#about-tab:checked ~ .container .about,
+#education-tab:checked ~ .container .education,
+#skills-tab:checked ~ .container .skills,
+#projects-tab:checked ~ .container .projects,
+#hobby-tab:checked ~ .container .hobby,
+#contact-tab:checked ~ .container .contact {
+    display: block;
+}
+
+/* ====== About Me Section ====== */
+.about {
+    background: linear-gradient(to right, #f3d9ff, #e0b3ff, #c599ff);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(128, 0, 128, 0.3);
+    border: 6px double #9c27b0;
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+    position: relative;
+}
+
+.about h2 {
+    color: #7b1fa2;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(128, 0, 128, 0.2);
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 500;
+    color: #4a236e;
+}
+
+/* ====== Profile Picture Styling ====== */
+.profile-pic {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #7b1fa2;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(128, 0, 128, 0.3);
+}
+
+/* ====== Card Style ====== */
+.card {
+    background: #e5c1ff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(155, 81, 224, 0.3);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* ====== Table (Education Section) ====== */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #f3e0ff;
+    color: #4a236e;
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #8e44ad;
+}
+
+th {
+    background: #9c27b0;
+    color: white;
+}
+
+/* ====== Photo Gallery ====== */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.gallery img {
+    width: 220px;
+    height: 160px;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 4px solid #9c27b0;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(124, 0, 182, 0.5);
+}
+
+/* ====== Contact Section Styling ====== */
+.contact {
+    background: linear-gradient(to right, #f3d9ff, #e0b3ff, #c599ff); /* Soft Purple Gradient */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(128, 0, 128, 0.3); /* Purple Shadow Effect */
+    border: 6px double #9c27b0; /* Double Border */
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Contact Section Heading */
+.contact h2 {
+    color: #7b1fa2;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(128, 0, 128, 0.2);
+}
+
+/* Contact Card */
+.contact .card {
+    background: #e5c1ff; /* Light Purple Background */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(155, 81, 224, 0.3);
+    font-size: 18px;
+}
+
+/* Contact Links */
+.contact .card a {
+    color: #7b1fa2;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact .card a:hover {
+    text-decoration: underline;
+    color: #5a1570; /* Darker Purple on Hover */
+}
+
+/* ====== Footer Styling (Fixed Issue) ====== */
+footer {
+    background: linear-gradient(to right, #9c27b0, #7b1fa2);
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 15px 15px 0 0;
+    position: relative;  /* Changed from fixed to relative */
+    bottom: 0;
+}
+
+/* Fix Overlapping Issue */
+.container {
+    padding-bottom: 50px; /* Prevents footer from overlapping */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .contact {
+        padding: 20px;
+    }
+
+    .contact h2 {
+        font-size: 24px;
+    }
+
+    .contact .card {
+        font-size: 16px;
+    }
+}
